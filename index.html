@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Profile Card</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #f7f9fb;
+        color: #1a1a1a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        position: relative;
+        width: 350px;
+        height: 550px;
+        text-align: left;
+        background-image: url("profile2.jpg");
+        background-size: cover;
+        background-position: top center;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+      .gradient-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 70%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+        pointer-events: none;
+      }
+      .overlay {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        height: auto;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      }
+      .profile-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.7rem;
+      }
+      .profile-icon {
+        width: 48px;
+        height: 48px;
+        background: #e0e0e0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #666;
+      }
+      .profile-info {
+        flex: 1;
+      }
+      .name {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 0;
+        color: #1a1a1a;
+        line-height: 1.2;
+      }
+      .email {
+        font-size: 0.9rem;
+        color: #666;
+        margin: 0;
+      }
+      .divider {
+        height: 1px;
+        background: rgba(0, 0, 0, 0.1);
+        margin: 0.3rem 0;
+      }
+      .info-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .info-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        color: #444;
+      }
+      .info-item a {
+        color: #444;
+        text-decoration: none;
+      }
+      .info-item a:hover {
+        color: #0066cc;
+      }
+      .title {
+        color: #666;
+        font-size: 0.9rem;
+        margin-top: 0.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" role="contentinfo">
+      <div class="gradient-overlay"></div>
+      <div class="overlay">
+        <div class="profile-header">
+          <div class="profile-info">
+            <h1 class="name">지수영</h1>
+            <div class="title">프론트엔드 개발자, 신한은행</div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="info-section">
+          <div class="info-item">
+            <span>📱</span>
+            <a href="tel:+821074746082">+82 10-7474-6082</a>
+          </div>
+          <div class="info-item">
+            <span>📧</span>
+            <a href="mailto:jisooyoung97@gmail.com">jisooyoung97@gmail.com</a>
+          </div>
+          <div class="info-item">
+            <span>🔗</span>
+            <a href="https://www.linkedin.com/in/sooyoung-ji/" target="_blank"
+              >linkedin.com/in/sooyoung-ji</a
+            >
+          </div>
+          <div class="info-item">
+            <span>📍</span>
+            <a href="https://maps.google.com/?q=서울특별시 중구 을지로 66" target="_blank"
+              >서울특별시 중구 을지로 66</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

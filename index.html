@@ -42,7 +42,7 @@
         left: 20px;
         right: 20px;
         height: auto;
-        background: rgba(255, 255, 255, 0.6);
+        background: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         padding: 1.5rem;
@@ -51,6 +51,22 @@
         gap: 0.5rem;
         border-radius: 16px;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      }
+      .overlay:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        background: rgba(255, 255, 255, 0.95);
+      }
+      .overlay:hover .name,
+      .overlay:hover .title,
+      .overlay:hover .info-item,
+      .overlay:hover .info-item a {
+        color: #1a1a1a;
+        text-shadow: none;
+      }
+      .overlay:hover .divider {
+        background: rgba(0, 0, 0, 0.1);
       }
       .profile-header {
         display: flex;
@@ -76,8 +92,10 @@
         font-size: 1.4rem;
         font-weight: 600;
         margin: 0;
-        color: #1a1a1a;
+        color: #ffffff;
         line-height: 1.2;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        transition: color 0.3s ease;
       }
       .email {
         font-size: 0.9rem;
@@ -86,8 +104,9 @@
       }
       .divider {
         height: 1px;
-        background: rgba(0, 0, 0, 0.1);
-        margin: 0.3rem 0;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 0;
+        transition: background-color 0.3s ease;
       }
       .info-section {
         display: flex;
@@ -99,19 +118,30 @@
         align-items: center;
         gap: 0.5rem;
         font-size: 0.9rem;
-        color: #444;
+        color: #ffffff;
+        transition: transform 0.2s ease, color 0.3s ease;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      .info-item:hover {
+        transform: translateX(5px);
       }
       .info-item a {
-        color: #444;
+        color: #ffffff;
         text-decoration: none;
+        transition: color 0.3s ease;
       }
-      .info-item a:hover {
+      .overlay:hover .info-item:hover {
+        color: #0066cc;
+      }
+      .overlay:hover .info-item:hover a {
         color: #0066cc;
       }
       .title {
-        color: #666;
+        color: #ffffff;
         font-size: 0.9rem;
         margin-top: 0.1rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        transition: color 0.3s ease;
       }
     </style>
   </head>
@@ -143,8 +173,8 @@
           </div>
           <div class="info-item">
             <span>📍</span>
-            <a href="https://maps.google.com/?q=서울특별시 중구 을지로 66" target="_blank"
-              >서울특별시 중구 을지로 66</a
+            <a href="https://maps.google.com/?q=서울특별시 중구 세종대로 67" target="_blank"
+              >서울특별시 중구 세종대로 67</a
             >
           </div>
         </div>
